@@ -62,7 +62,7 @@ const SuggestedUsers = () => {
           <img
             src={man}
             className="w-12 h-12 rounded-2xl object-cover"
-            alt=""
+            alt="sugg_img"
           />
           <div className="flex flex-col gap-1  border-solid border-l-pink-500 pl-2">
             <span className="text-xl font-medium">
@@ -82,7 +82,7 @@ const SuggestedUsers = () => {
               <div className="flex items-center gap-2" key={suggestedUser._id}>
                 <Link to={`/profileDetail/${suggestedUser._id}`}>
                   <img
-                    alt="suggested Users"
+                    alt="sugg_Users"
                     src={suggestedUser?.photo ? suggestedUser.photo : man}
                     className="h-12 w-12 object-cover rounded-2xl"
                   />

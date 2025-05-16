@@ -46,7 +46,7 @@ const Signup = () => {
     <div className='flex items-center justify-center w-screen h-screen bg-red-400 absolute bg-black bg-blend-darken bg-center bg-cover'>
       <div className='flex items-center justify-center h-2/3 w-1/2 rounded-3xl'>
       <div className='flex w-1/2 h-full'>
-      <img src={img} className='w-full h-full object-cover'/>
+      <img alt='signup_img' src={img} className='w-full h-full object-cover'/>
     </div>
     <div className='flex flex-col bg-white h-full w-full overflow-hidden'>
       <h2 className='text-center text-4xl m-10 text-teal-800'>Sign Up</h2>

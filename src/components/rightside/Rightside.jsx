@@ -37,7 +37,7 @@ const Rightside = () => {
         {friends?.length > 0 ? (
           friends?.map((friend) => (
              <Link className='flex items-center gap-2' to={`/profileDetail/${friend._id}`} key={friend._id}>
-              <img  alt='suggested friend img' src={man} className='w-14 h-14 rounded-2xl object-cover'/>
+              <img  alt='sugg_img' src={man} className='w-14 h-14 rounded-2xl object-cover'/>
               <div className='flex'>
                 <span className='text-lg font-medium'>{capitalizeFirstLetter(friend.username)}</span>
               </div>

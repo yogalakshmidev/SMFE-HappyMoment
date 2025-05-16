@@ -132,7 +132,7 @@ const Post = ({ post }) => {
       <div className='flex flex-col  w-full  overflow-hidden rounded-xl pb-4 h-full bg-teal-300 border-solid border-cyan-100 border max-w-7xl'>
         <div className='flex  justify-between items-center px-3 py-2 border border-solid border-cyan-100 pb-4 mt-2'>
           <Link to={`/profileDetail/${post?.user?._id}`} className='flex items-center gap-2'>
-            <img  alt='user profile img' src={woman} className='h-10 w-10 rounded-2xl object-cover' />
+            <img  alt='user_img' src={woman} className='h-10 w-10 rounded-2xl object-cover' />
             <div className='flex flex-col'>
               <span className='text-lg font-medium'>{capitalizeFirstLetter(post.user.username)}</span>
               <span className='text-sm text-cyan-600'>{format(post.createdAt)}</span>
@@ -158,7 +158,7 @@ const Post = ({ post }) => {
           <div className='text-lg text-black p-4 '>{post.desc}</div>
           {post?.location && <div className='p-2 '>Location: {post.location}</div>}
           {/* api call for images */} 
-          <img alt="post images" className='object-contain w-full h-96' src={post?.photo ? `https://smbe-happymoment.onrender.com/images/${post?.photo}` : woman} />
+          <img alt="post_img" className='object-contain w-full h-96' src={post?.photo ? `https://smbe-happymoment.onrender.com/images/${post?.photo}` : woman} />
           {/* <img alt="post images" className='object-contain w-full h-96' src={post?.photo ? `http://localhost:5000/images/${post?.photo}` : woman} /> */}
         </div>
         {/* need to check */}
