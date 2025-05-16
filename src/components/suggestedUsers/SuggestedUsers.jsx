@@ -16,9 +16,9 @@ const SuggestedUsers = () => {
     const fetchSuggestedUsers = async () => {
       
       try {
-        
-        const res = await fetch(
-          `http://localhost:5000/user/find/suggestedUsers`,
+        // api call
+        const res = await fetch(`https://smbe-happymoment.onrender.com/user/find/suggestedUsers`,
+        // const res = await fetch(`http://localhost:5000/user/find/suggestedUsers`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -38,7 +38,9 @@ const SuggestedUsers = () => {
 
   const toggleFollow = async (id) => {
     try {
-      await fetch(`http://localhost:5000/user/toggleFollow/${id}`, {
+      // api call
+      await fetch(`https://smbe-happymoment.onrender.com/user/toggleFollow/${id}`,{
+      // await fetch(`http://localhost:5000/user/toggleFollow/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

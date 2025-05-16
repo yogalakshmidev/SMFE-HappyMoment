@@ -34,8 +34,10 @@ const Upload = () => {
         formData.append("image", photo);
         console.log("form data is ",formData);
         
+        // api call
+        await fetch(`https://smbe-happymoment.onrender.com/upload/image`,{
 
-        await fetch(`http://localhost:5000/upload/image`, {
+        // await fetch(`http://localhost:5000/upload/image`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -44,7 +46,9 @@ const Upload = () => {
         });
         
       }
-      const res = await fetch(`http://localhost:5000/post/createPost`, {
+      // api call
+      const res = await fetch(`https://smbe-happymoment.onrender.com/post/createPost`,{
+      // const res = await fetch(`http://localhost:5000/post/createPost`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

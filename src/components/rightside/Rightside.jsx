@@ -13,7 +13,9 @@ const Rightside = () => {
   useEffect(() => {
     const fetchFriends = async() => {
       try {
-        const res = await fetch(`http://localhost:5000/user/find/friends`, {
+        // api call
+        const res= await fetch(`https://smbe-happymoment.onrender.com/user/find/friends`,{
+        // const res = await fetch(`http://localhost:5000/user/find/friends`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

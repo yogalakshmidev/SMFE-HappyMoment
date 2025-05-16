@@ -12,7 +12,9 @@ const Posts = () => {
   useEffect(() => {
     const fetchPosts = async() => {
       try {
-        const res = await fetch(`http://localhost:5000/post/timeline/posts`, {
+        // api call
+        const res = await fetch(`https://smbe-happymoment.onrender.com/post/timeline/posts`,{
+        // const res = await fetch(`http://localhost:5000/post/timeline/posts`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

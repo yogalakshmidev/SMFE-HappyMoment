@@ -27,7 +27,9 @@ const Post = ({ post }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/comment/${post._id}`, {
+        // api call
+        const res = await fetch(`https://smbe-happymoment.onrender.com/comment/${post._id}`,{
+        // const res = await fetch(`http://localhost:5000/comment/${post._id}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -44,7 +46,9 @@ const Post = ({ post }) => {
 
   const deletePost = async () => {
     try {
-      await fetch(`http://localhost:5000/post/${post._id}`, {
+      // api call
+      await fetch(`https://smbe-happymoment.onrender.com/post/${post._id}`,{
+      // await fetch(`http://localhost:5000/post/${post._id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -58,7 +62,9 @@ const Post = ({ post }) => {
 
   const handleLikePost = async () => {
     try {
-      await fetch(`http://localhost:5000/post/toggleLike/${post._id}`, {
+      // api call
+      await fetch(`https://smbe-happymoment.onrender.com/post/toggleLike/${post._id}`,{
+      // await fetch(`http://localhost:5000/post/toggleLike/${post._id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -74,7 +80,9 @@ const Post = ({ post }) => {
     try {
       console.log("enter into bookmark and postid is",post._id,token);
       setIsBookmarked(prev => !prev)
-      await fetch(`http://localhost:5000/user/bookmark/${post._id}`, {
+      // api call
+      await fetch(`https://smbe-happymoment.onrender.com/user/bookmark/${post._id}`,{
+      // await fetch(`http://localhost:5000/user/bookmark/${post._id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
@@ -97,7 +105,9 @@ const Post = ({ post }) => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/comment/createComment`, {
+      // api call 
+      const res = await fetch(`https://smbe-happymoment.onrender.com/comment/createComment`, {
+      // const res = await fetch(`http://localhost:5000/comment/createComment`, {
         headers: {
           "Content-Type": 'application/json',
           "Authorization": `Bearer ${token}`
@@ -147,7 +157,9 @@ const Post = ({ post }) => {
         <div className='h-fit w-full'>
           <div className='text-lg text-black p-4 '>{post.desc}</div>
           {post?.location && <div className='p-2 '>Location: {post.location}</div>}
-          <img alt="post images" className='object-contain w-full h-96' src={post?.photo ? `http://localhost:5000/images/${post?.photo}` : woman} />
+          {/* api call for images */} 
+          <img alt="post images" className='object-contain w-full h-96' src={post?.photo ? `https://smbe-happymoment.onrender.com/images/${post?.photo}` : woman} />
+          {/* <img alt="post images" className='object-contain w-full h-96' src={post?.photo ? `http://localhost:5000/images/${post?.photo}` : woman} /> */}
         </div>
         {/* need to check */}
         <div className='flex justify-between items-center text-2xl px-2 py-4 border-b border-solid border-teal-700'>

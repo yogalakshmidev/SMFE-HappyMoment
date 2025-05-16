@@ -12,7 +12,7 @@ const Login = () => {
   const [error, setError] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const backendUrl = process.env.BACKEND_URL;
+  
 
   const handleLogin = async(e) => {
     e.preventDefault()
@@ -20,8 +20,10 @@ const Login = () => {
     if(email === '' || password === '') return
 
     try {
-      console.log("backend url is",backendUrl)
-      const res = await fetch(`http://localhost:5000/auth/login`, {
+      
+      // api call
+      const res = await fetch(`https://smbe-happymoment.onrender.com/auth/login`,{
+      // const res = await fetch(`http://localhost:5000/auth/login`, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -45,7 +47,7 @@ const Login = () => {
     <div className='flex items-center justify-center w-full h-full absolute top-0 left-0 z-10 bg-center bg-blend-darken bg-slate-200 bg-cover'>
     <div className='flex flex-row-reverse items-center justify-center h-2/3 w-1/2 rounded-3xl'>
     <div className='flex grow h-full w-1/2'>
-      <img src={img} className='w-full h-full object-cover'/>
+      <img src={img} alt='loginimg' className='w-full h-full object-cover'/>
       </div>
       <div className='flex grow bg-white h-full w-full overflow-hidden'>
       <h2 className='flex justify-center text-center text-red-400 text-4xl mt-10 '>Login</h2>

@@ -18,7 +18,9 @@ const PostDetails = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/post/find/${id}`)
+        // api call
+        const res = await fetch(`https://smbe-happymoment.onrender.com/post/find/${id}`)
+        // const res = await fetch(`http://localhost:5000/post/find/${id}`)
         const data = await res.json()
         setPost(data)
       } catch (error) {
@@ -31,7 +33,9 @@ const PostDetails = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/comment/${id}`, {
+        // api call
+        const res= await fetch(`https://smbe-happymoment.onrender.com/comment/${id}`,{
+        // const res = await fetch(`http://localhost:5000/comment/${id}`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -64,7 +68,9 @@ const PostDetails = () => {
      }
 
      try {
-      const res = await fetch(`http://localhost:5000/comment`, {
+      // api call
+      const res = await fetch(`https://smbe-happymoment.onrender.com/comment`,{
+      // const res = await fetch(`http://localhost:5000/comment`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
@@ -85,7 +91,9 @@ const PostDetails = () => {
     <div className='flex gap-3 w-full'>
       <div className=' flex w-9/12 mt-6 mx-0 h-96'>
         <div className='flex w-9/12 h-full bg-black'>
-          <img alt='postPhoto' src={post?.photo && `http://localhost:5000/images/${post?.photo}`} className='h-full w-full object-cover opacity-95'/>
+        {/* api call for images */} 
+        <img alt='postPhoto' src={post?.photo && `https://smbe-happymoment.onrender.com/images/${post?.photo}`} className='h-full w-full object-cover opacity-95'/>
+          {/* <img alt='postPhoto' src={post?.photo && `http://localhost:5000/images/${post?.photo}`} className='h-full w-full object-cover opacity-95'/> */}
         </div>
         <div className='flex flex-1 flex-col justify-between '>
           <div className='border-b-2 border-solid border-cyan-900 w-full'>

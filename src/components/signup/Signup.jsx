@@ -13,15 +13,16 @@ const Signup = () => {
   const [error,setError] = useState(false)
   const dispatch = useDispatch();
   const navigate = useNavigate()
-  const backendUrl = process.env.BACKEND_URL;
+  
   const handleSignup = async(e)=> {
     e.preventDefault()
     if(username === '' || email === '' || password === '') return
     console.log(username, email, password)
 
     try {
-      console.log("backend url is",backendUrl)
-      const res = await fetch(`http://localhost:5000/auth/register`, {
+      // api call
+      const res = await fetch(`https://smbe-happymoment.onrender.com/auth/register`,{
+      // const res = await fetch(`http://localhost:5000/auth/register`, {
         headers: {
           'Content-Type': 'application/json'
         },

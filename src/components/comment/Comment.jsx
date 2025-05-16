@@ -13,7 +13,9 @@ const Comment = ({ c }) => {
 
    const handleLikeComment = async() => {
     try {
-      await fetch(`http://localhost:5000/comment/toggleLike/${c?._id}`, {
+      // api call
+      await fetch(`https://smbe-happymoment.onrender.com/comment/toggleLike/${c?._id}`,{
+      // await fetch(`http://localhost:5000/comment/toggleLike/${c?._id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         },
