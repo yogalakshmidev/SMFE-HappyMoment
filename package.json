@@ -20,13 +20,13 @@
     "timeago.js": "^4.0.2",
     "web-vitals": "^2.1.4"
   },
-  {
+
   "scripts": {
     "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test"
-  }
-},
+  },
+
   // "scripts": {
   //   "start": "react-scripts start",
   //   "build": "react-scripts build",
