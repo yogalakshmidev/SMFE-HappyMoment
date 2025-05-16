@@ -12,7 +12,7 @@ const Upload = () => {
   const [photo, setPhoto] = useState("");
   const { token } = useSelector((state) => state.auth);
   const navigate = useNavigate();
-  const backendUrl = process.env.BACKEND_URL;
+  
 
   const handleState = (e) => {
     setState((prev) => {
