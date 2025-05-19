@@ -95,6 +95,7 @@ const ProfileDetail = () => {
         <div className='flex items-center gap-10'>
           <div className='h-20 w-20'>
             <img 
+            alt='profileImg'
             // api call            
             src={profile?.profileImg ? `https://smbe-happymoment.onrender.com/images/${profile?.profileImg}` : man}
             //  src={profile?.profileImg ? `http://localhost:5000/images/${profile?.profileImg}` : man}

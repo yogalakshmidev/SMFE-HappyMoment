@@ -23,13 +23,6 @@ console.log("user value is",user)
         <Route path='/upload' element={user ? <Upload /> : <Navigate to='/login' />} />
         <Route path='/profileDetail/:id' element={user ? <ProfileDetail /> : <Navigate to='/login' />} />
         <Route path='/postDetails/:id' element={user ? <PostDetails /> : <Navigate to='/login' />} />
-{/* 
-<Route path='/' element={<Home /> } />
-        <Route path='/login' element={ <Login />} />
-        <Route path='/signup' element={ <Signup />} />
-        <Route path='/upload' element={<Upload /> } />
-        <Route path='/profileDetail/:id' element={<ProfileDetail /> } />
-        <Route path='/postDetails/:id' element={<PostDetails /> } /> */}
       </Routes>
       <Footer />
     </div>

@@ -124,7 +124,7 @@ return (
           <div onClick={() => setSearchText("")} className={classes.allUsersContainer}>
             {filteredUsers?.map((user) => (
               <Link to={`/profileDetail/${user._id}`} key={user._id}>
-                <img src={man}/>
+                <img src={man} alt='navbarImg'/>
                 <div className={classes.userData}>
                   <span>{user?.username}</span>
                   <span>{user?.bio?.slice(0, 10)}</span>
@@ -142,7 +142,7 @@ return (
           <AiOutlineUser />
           <AiOutlineLogout onClick={handleLogout} />
         </div>
-        <img src={man} className={classes.profileUserImg} onClick={() => setShowModal(prev => !prev)} />
+        <img src={man} alt='' className={classes.profileUserImg} onClick={() => setShowModal(prev => !prev)} />
         {showModal &&
           <div className={classes.modal}>
             <span onClick={handleShowForm}>Update Profile</span>
@@ -193,8 +193,8 @@ return (
                     {filteredUsers?.map((user) => (
                       <Link to={`/profileDetail/${user._id}`} key={user._id} onClick={() => setShowMobileNav(false)}>
                         {/* api call for images */}
-                      <img src={user?.photo ? `https://smbe-happymoment.onrender.com/images/${user.photo}` : man} />
-                        {/* <img src={user?.photo ? `http://localhost:5000/images/${user.photo}` : man} /> */}
+                      <img alt='profileImg' src={user?.photo ? `https://smbe-happymoment.onrender.com/images/${user.photo}` : man} />
+                        {/* <img alt='profileImg src={user?.photo ? `http://localhost:5000/images/${user.photo}` : man} /> */}
                         <div className={classes.userData}>
                           <span>{user?.username}</span>
                           <span>{user?.bio?.slice(0, 10)}</span>
@@ -211,6 +211,7 @@ return (
                   <AiOutlineLogout onClick={handleLogout} />
                 </div>
                 <img
+                alt='userImg'
                   onClick={() => setShowModal(!showModal)}
                   // api call for images  
                   src={user?.profileImg ? `https://smbe-happymoment.onrender.com/images/${user?.profileImg}` : man}
