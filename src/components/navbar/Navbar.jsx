@@ -47,7 +47,9 @@ useEffect(() => {
     }
   }
   fetchAllUsers()
-}, [])
+  })
+  // check for build issue
+// }, [])
 
 useEffect(() => {
   if(searchText){
