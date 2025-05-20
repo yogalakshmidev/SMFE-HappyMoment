@@ -155,12 +155,12 @@ return (
           <div className={classes.updateProfileForm} onClick={() => setShowForm(false)}>
             <div className={classes.updateProfileWrapper} onClick={(e) => e.stopPropagation()}>
               <h2>Update Profile</h2>
-              <form className='flex flex-col' onSubmit={handleUpdateProfile}>
+              <form className='flex flex-col gap-2' onSubmit={handleUpdateProfile}>
                 <input type="text" placeholder='Username' name="username" className=' border-2 border-solid border-teal-600 p-px m-px' onChange={handleState} />
                 <input type="email" placeholder='Email' name="email" className='border-2 border-solid border-teal-600 p-px m-px' onChange={handleState} />
                 <input type="text" placeholder='Bio' name="bio" className='border-2 border-solid border-teal-600 p-px m-px' onChange={handleState} />
                 <input type="password" placeholder='Password' name="password" className='border-2 border-solid border-teal-600 p-px m-px' onChange={handleState} />
-                {/* <div style={{ display: 'flex', alignItems: 'center', gap: '12px', width: '50%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', width: '50%' }}>
                   <label htmlFor='photo'>Profile Picture <AiOutlineFileImage /></label>
                   <input
                     type="file"
@@ -170,9 +170,9 @@ return (
                     className='border-2 border-solid border-teal-600 p-px m-px'
                     onChange={(e) => setPhoto(e.target.files[0])}
                   />
-                  {photo && <p>{photo.name}</p>}
+                  {/* {photo && <p>{photo.name}</p>} */}
                 </div>
-                <button>Update profile</button> */}
+                <button>Update profile</button>
               </form>
               <AiOutlineClose onClick={() => setShowForm(false)} className={classes.removeIcon} />
             </div>
