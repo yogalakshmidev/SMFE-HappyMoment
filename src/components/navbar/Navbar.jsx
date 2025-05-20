@@ -156,10 +156,10 @@ return (
             <div className={classes.updateProfileWrapper} onClick={(e) => e.stopPropagation()}>
               <h2>Update Profile</h2>
               <form className='flex flex-col gap-2' onSubmit={handleUpdateProfile}>
-                <input type="text" placeholder='Username' name="username" className=' border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
-                <input type="email" placeholder='Email' name="email" className='border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
-                <input type="text" placeholder='Bio' name="bio" className='border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
-                <input type="password" placeholder='Password' name="password" className='border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
+                <input type="text" placeholder='Username' name="username" className='w-1/2 border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
+                <input type="email" placeholder='Email' name="email" className='w-1/2 border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
+                <input type="text" placeholder='Bio' name="bio" className='w-1/2 border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
+                <input type="password" placeholder='Password' name="password" className='w-1/2 border-2 border-solid border-teal-600 p-px m-2' onChange={handleState} />
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', width: '50%' }}>
                   <label htmlFor='photo'>Profile Picture <AiOutlineFileImage /></label>
                   <input
